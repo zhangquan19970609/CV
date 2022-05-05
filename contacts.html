@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me:</title>
+</head>
+<body>
+    <ul>
+        <li><strong>My Personal Sites: </strong>
+            <ul type = "i">
+                <li>Tel: (+852) 6662 1597</li>
+                <li>E-mail: <a href="zhangquan19970609@outlook.com"><strong>zhangquan19970609@outlook.com</strong></a></li>
+            </ul>
+        </li> 
+    </ul>
+    <!--
+        建立一个接收他人发送联系信息的 form。
+
+        1. form 和 label 都需要 close tag，在label close 之后，才能开始定义各个iput。
+        2. input 有多种预置的 attribute types，包含 text, color, submit 等。
+    -->
+    <form class: action = "mailto: zhangquan19970609@outlook.com" method = "post" enctype="text/plain">
+        <label>Your name: </label><br>
+        <input type = "text" name="YourName"><br>
+        <label>Your Email: </label><br>
+        <input type="email" name="YourEmail" id=""><br>
+        <label>Use textarea to receive message:</label><br>
+        <textarea name="YourMessage" id="" cols="30" rows="10"></textarea><br>
+        <input type="submit">
+        <!--
+            1. 使用 form 的 attribute (method ecntype action = mailto)
+               与 input 的 name attribute 交互，可以让 form 自动编写邮件。
+            2.  
+        -->
+    </form>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!-- 
+    1. 新建 Web dev Folder，在VSCode中打开这个Folder
+    2. 在Folder下建立一个 index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+    1. meta charset = "UTF-8", 用来说明本网页采用的主要字符格式是 UTF-8
+    2. <meta name="description" 
+        content="The MDN Web Docs site provides information 
+        about Open Web technologies including HTML, CSS, 
+        and APIs for both Web sites and progressive web apps.">
+
+        <meta name = "description"> 的内容，即是搜索引擎中显示的网站简介。
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZHANG Quan's Resume</title>
+</head>
+    <body>
+        <table cellspacing = "40">
+            <!-- cellspacing 可以调整表格中格与格之间的间距，但也是 deprecated attribute的一种 -->
+            <tr>
+                <td>
+                    <img src = "images/OLDMANZHANG.png" alt = "ZHANG Quan Profile">
+                </td>
+                <td>
+                    <h1>ZHANG Quan</h1>
+                    <p><em>Former editor of <strong>DotDotNews</strong></em></p>
+                    <p><strong>Email: </strong>bighattartar@mail.ru</p>
+                    <p><strong>Mobile: </strong>+852 66621597</p>
+                </td>
+            </tr>
+        </table>
+        <hr size = "3" noshade>
+        <!-- 插入图片路径：
+            <img src = "xxx" alt = "xxx"> 在网站中插入图片。
+            第一个 xxx 是图片路径，
+            可用HTML 同目录的图片名直接调用或者调用网址。
+            当 图片放在文件夹里时，则使用 folder/image.xxx 的方式前往。
+
+            第二个 xxx 是搜索引擎抓取的关键字，
+            也会在图片无法显示时代为显示。
+        -->
+        
+        <!-- 制造斜体/粗体文字
+            1. 使用 <i> </i>可使字符italicize斜体字，
+               使用<em> </em>则让文本被强调。
+               二者视觉效果相同，但<em>有强调之意。
+
+            2. <strong> 和 <b> 也表达一样的视觉效果，
+                但<b>仅为加粗，不表示强调。
+
+            3. 在可能的情况下，尽量使用 <em>来斜体，用 <strong>来加粗
+        -->
+        
+        <p><strong>My favourite(private): </strong><a href="https://www.shadbase.com"><strong>shadbase</strong></a></p>
+        <p><strong>My Facebook(private): </strong><a href="https://www.facebook.com"><strong>facebook</strong></a></p>
+        
+        <a href="hobbies.html">My Hobbies</a>
+        <p>Link to: <a href="contacts.html">Contact me</a></p>
+        <!--
+            1. 使用 <a href = "XXX.com">XXX</a>
+               的方式添加文本超链接。 
+               引号内的XXX是跳转的超链接，后面XXX是超链接对应的文字。
+            2. 链接如果不是本地路径，必须加上https://www., 而不能直接写 shadbase.com
+            3. 或者亦可建立一个同目录、同优先级的 html 文件，直接用该文件的路径，
+               在该分页内利用 Doctype HTML 建立新的超链接页面。
+               这样就利用超链接建立了分页面。
+               如这一行：<p>Link to: <a href="contacts.html">Contact me</a></p>
+        -->
+        <hr size = "3" noshade>
+        <br>
+        <!--
+            <br>可以用来换行、制造空行。
+        -->
+        <p>My name is ZHANG Quan. I graduated from the Chinese University of Hong Kong, 
+            reveived a journalism degree with an excellent grade. 
+            I self-taught front-end development, including HTML, CSS and Javascript. 
+            I am also able to perform Object-oriented programming using Python, with 
+            understanding in data structure and algorithm.
+        </p>
+        <br>
+        <hr size = "3" noshade>
+        <h3>Education</h3>
+        <ul>
+            <li>The Chinese University of Hong Kong, Bachelor of Social Science in Journalism
+                <!-- closing </li> tag not here! 涉及嵌套时，parent element 不在本行结尾，而在嵌套结束时结尾-->
+                <ol type = "i">
+                    <li>Major in English Journalism & Creative Media</li>
+                    <li>Graduated in 2020</li>
+                </ol>
+            </li> <!-- Here's the closing </li> tag -->
+        </ul>
+        <!--
+            <ul> <li> </li> </ul> 用以表达无需序号的bullet point
+            <ol> <li> </li> </ol> 用以表达带序号的bullet point
+            <ol type = "i">
+        -->
+        <hr size = "3" noshade>
+        <h3>Experience</h3>
+        <table border="1" cellspacing = "10">
+            <!--
+                与表格有关的大部分 HTML attribute，如 border，已经deprecated，过时不用。
+            -->
+            <thead>
+                <tr>
+                    <th>Dates</th>
+                    <th>Academic & Working Experiences</th>
+                    <th>Association</th>
+                    <!--
+                    当涉及table header时，使用 th 在 tr 内部代替 td。
+                    -->
+                </tr>
+            </thead>
+            <tr>
+                <!--
+                tr 将创建一个 row，而td 则在横行内创造 data element。
+                -->
+                <td>2015 - 2020</td>
+                <td>Journalist</td>
+                <td>The Chinese University of Hong Kong</td>
+            </tr>
+            <tr>
+                <td>2020-2022</td>
+                <td>Graphic designer & videography editor</td>
+                <td>DotNews</td>
+            </tr>
+            <tr>
+                <td>2021-2023</td>
+                <td>Freelance developer</td>
+                <td>XXX Platform</td>
+            </tr>
+        </table>
+        <!-- Challenge: 使用 表哥做一个skill table，分为两列（而不是用4个td）-->
+        <!-- 我的答案：创造一个1 row 2 cell 的 表格，并在其中分别创建 seperare tables-->
+        <hr size = "3" noshade>
+        <h3>Skills</h3>
+                    <table cellspacing = "10">
+                        <tr>
+                            <td>Python</td>
+                            <td>👍👍👍</td>
+                        </tr>
+                        <tr>
+                            <td>Adobe</td>
+                            <td>👍👍👍👍👍</td>
+                        </tr>
+                    </table>
+    </body>
+</html>
